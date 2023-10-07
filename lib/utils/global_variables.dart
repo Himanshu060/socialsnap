@@ -11,11 +11,11 @@ List<Widget> homeScreenItem = [
   const FeedScreen(),
   const SearchScreen(),
   const AddPostScreen(),
-  const Scaffold(
-    body: SafeArea(
-      child: Center(child: Text('Notification, Coming Soon')),
-    ),
-  ),
+  // const Scaffold(
+  //   body: SafeArea(
+  //     child: Center(child: Text('Notification, Coming Soon')),
+  //   ),
+  // ),
   ProfileScreen(
     uid: FirebaseAuth.instance.currentUser!.uid,
   ),

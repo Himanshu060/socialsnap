@@ -9,6 +9,7 @@ import 'package:instagram_clone/utils/utils.dart';
 import 'package:instagram_clone/widgets/like_animation.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class PostCard extends StatefulWidget {
   final snap;
@@ -187,20 +188,22 @@ class _PostCardState extends State<PostCard> {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Share.share('${widget.snap['postUrl']}');
+                },
                 icon: const Icon(
                   Icons.send,
                 ),
               ),
-              Expanded(
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.bookmark_border),
-                  ),
-                ),
-              )
+              // Expanded(
+              //   child: Align(
+              //     alignment: Alignment.bottomRight,
+              //     child: IconButton(
+              //       onPressed: () {},
+              //       icon: const Icon(Icons.bookmark_border),
+              //     ),
+              //   ),
+              // )
             ],
           ),
 

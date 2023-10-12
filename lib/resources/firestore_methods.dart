@@ -98,7 +98,7 @@ class FireStoreMethods {
             });
         await FirebaseFirestore.instance.collection('users').doc(uid).update(
             {
-              'following' : FieldValue.arrayUnion([followId]),
+              'following' : FieldValue.arrayRemove([followId]),
             });
       }
       else{
